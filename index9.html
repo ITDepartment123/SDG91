@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SDG 9: Industry, Innovation and Infrastructure</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #FFA500;
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .tab {
+      flex: 1;
+      text-align: center;
+      padding: 12px;
+      cursor: pointer;
+      background-color: #fff3cd;
+      margin: 5px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .tab:hover,
+    .tab.active {
+      background-color: #ffd67f;
+      font-weight: bold;
+    }
+
+    .tab-content {
+      display: none;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 10px;
+      animation: fadeIn 0.4s ease-in;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .accordion {
+      background-color: #e9f7ef;
+      color: #333;
+      cursor: pointer;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 16px;
+      transition: 0.3s;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+
+    .accordion:hover {
+      background-color: #d4f3dd;
+    }
+
+    .panel {
+      padding: 0 15px;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+      border-left: 4px solid #28a745;
+      margin-bottom: 10px;
+    }
+
+    #moreOverviewBtn {
+      margin-top: 15px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #moreOverviewBtn:hover {
+      background-color: #218838;
+    }
+
+    #moreOverview {
+      display: none;
+      margin-top: 15px;
+      background-color: #f0f8ff;
+      padding: 15px;
+      border-left: 4px solid #ffa500;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .tabs {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SDG 9: Industry, Innovation and Infrastructure</h1>
+  </header>
+
+  <div class="container">
+    <div class="tabs">
+      <div class="tab active" onclick="showTab(0)">Overview</div>
+      <div class="tab" onclick="showTab(1)">Key Targets</div>
+      <div class="tab" onclick="showTab(2)">What You Can Do</div>
+    </div>
+
+    <!-- Overview Tab -->
+    <div class="tab-content active">
+      <h2>Overview</h2>
+      <p>
+        Sustainable Development Goal 9 focuses on building resilient infrastructure, promoting inclusive and sustainable industrialization, and fostering innovation. These pillars support economic growth, create jobs, and help achieve many other global goals.
+      </p>
+      <ul>
+        <li><strong>Infrastructure</strong> like roads, bridges, power, and internet connects people and improves access to healthcare, education, and markets.</li>
+        <li><strong>Industrialization</strong> increases productivity, fosters employment, and enhances the standard of living.</li>
+        <li><strong>Innovation</strong> provides new tools to solve global challenges such as climate change, clean energy, and access to clean water.</li>
+      </ul>
+
+      <button id="moreOverviewBtn" onclick="toggleOverview()">More Info</button>
+      <div id="moreOverview">
+        <p>
+          Many regions in the world still lack essential infrastructure like reliable electricity, clean water systems, and digital access. Without these, communities cannot thrive. SDG 9 aims to bridge this gap by encouraging investment in transport systems, green energy, and communication technology.
+        </p>
+        <p>
+          Additionally, SDG 9 promotes support for small-scale industries, particularly in developing countries, and emphasizes international cooperation in research and development (R&D). A focus on clean technologies, green innovation, and fair trade is key to achieving this goal sustainably.
+        </p>
+        <p>
+          Through smart infrastructure and forward-thinking innovation, the world can become more connected, more inclusive, and more prepared for future challenges.
+        </p>
+      </div>
+    </div>
+
+    <!-- Key Targets Tab -->
+    <div class="tab-content">
+      <h2>Key Targets</h2>
+      <ul>
+        <li>Develop reliable, sustainable and resilient infrastructure with equitable access for all.</li>
+        <li>Promote inclusive and sustainable industrialization and raise industrys share of employment and GDP.</li>
+        <li>Increase access of small-scale industrial and other enterprises to financial services and markets.</li>
+        <li>Enhance scientific research and upgrade technological capabilities of industrial sectors.</li>
+        <li>Improving Access and Digital Literacy through Laptops</li>
+        <li>Enhancing Personalized Learning with AI</li>
+      </ul>
+    </div>
+
+    <!-- What You Can Do Tab -->
+    <div class="tab-content">
+      <h2>What You Can Do</h2>
+      <p>Click each tip below to learn how you can support SDG 9:</p>
+
+      <button class="accordion">Support Local Businesses</button>
+      <div class="panel">
+        <p>Shop from local or ethical businesses that practice sustainability. Look for eco-labels and community-owned products. <br> <a href="https://www.buycott.com/" target="_blank">Support</a></p>
+      </div>
+
+      <button class="accordion">Promote STEM Education</button>
+      <div class="panel">
+        <p>Encourage friends and family to explore Science, Technology, Engineering, and Math (STEM). Join coding clubs or innovation programs in your school.<br><a href="https://www.stem.org.uk/" target="_blank">Promote</a></p>
+      </div>
+
+      <button class="accordion">Donate Old Laptops</button>
+      <div class="panel">
+        <p>Donate your Old Laptops to schools. <br> <a href="https://www.donateinkind.in/computer-and-laptop-donation" target="_blank">Donate</a></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; Created by Krishiv Joshi & Tanay | Grade 8 | Lotus Valley International School, Noida
+  </footer>
+
+  <script>
+    function showTab(index) {
+      const tabs = document.querySelectorAll('.tab');
+      const contents = document.querySelectorAll('.tab-content');
+      tabs.forEach((tab, i) => {
+        tab.classList.toggle('active', i === index);
+        contents[i].classList.toggle('active', i === index);
+      });
+    }
+
+    const acc = document.querySelectorAll(".accordion");
+    acc.forEach(button => {
+      button.addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      });
+    });
+
+    function toggleOverview() {
+      const more = document.getElementById("moreOverview");
+      const btn = document.getElementById("moreOverviewBtn");
+      if (more.style.display === "block") {
+        more.style.display = "none";
+        btn.textContent = "More Info";
+      } else {
+        more.style.display = "block";
+        btn.textContent = "Hide Info";
+      }
+    }
+  </script>
+</body>
+</html>
